@@ -117,7 +117,8 @@ void * popBack(List * list) {
 void * popCurrent(List * list) 
 {
   if(list->current)
-    printf("hello");
+    if(!list->current->prev)
+      printf("hello");
 
     
   return NULL;
