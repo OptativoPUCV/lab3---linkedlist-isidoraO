@@ -123,6 +123,8 @@ void * popCurrent(List * list)
     list->head = list->current->next;
   if(list->current->next)
     list->current->next->prev = list->current->prev;
+  else
+    list->tail = list->current->prev;
   list->current = list->current->next;
   printf("%i ", *(int*)dato);
   printf("%i ",*(int*) list->tail->prev->data);
