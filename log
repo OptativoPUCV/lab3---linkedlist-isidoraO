@@ -430,3 +430,14 @@ Thu 28 Mar 2024 11:10:14 PM UTC:
  tests:  10|2
 total_score: 45/70
 32e47fc
+Thu 28 Mar 2024 11:10:47 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:129:10: error: function returns address of local variable [-Werror=return-local-addr]
+  129 |   return &dato;
+      |          ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8ab6776

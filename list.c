@@ -126,7 +126,7 @@ void * popCurrent(List * list)
   list->current = list->current->next;
   printf("%i ", *(int*)dato);
   printf("%i ",*(int*) list->tail->data);
-  return dato;
+  return &dato;
 }
 
 void cleanList(List * list) {
