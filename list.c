@@ -118,12 +118,7 @@ void * popCurrent(List * list)
 {
   if(list->current)
   {
-    printf("Hello");
-    list->head = list->current->next;
-    if(list->head)
-    {
-      list->head->prev = NULL;
-    }
+    printf("%i", list->current->data);
   }
   return NULL;
 }
