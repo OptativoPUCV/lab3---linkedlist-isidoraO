@@ -116,18 +116,13 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) 
 {
-  if(list->current)
-  {
+  if(list->current->prev)
+    list->current->prev->next = list->current->next;
+  else
     list->head = list->current->next;
-    free(list->current);
-    list->current = NULL;
-    if(list->head)
-    {
-
-     // printf("%i", *(int *)list->head->prev->data);
-    }
-  }
-  return NULL;
+  if(list->current->next)
+    list->current->next->prev = list->current->prev;
+  return list->current;
 }
 
 void cleanList(List * list) {
