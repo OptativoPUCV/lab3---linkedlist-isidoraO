@@ -310,3 +310,9 @@ list.c:121:14: error: format ‘%i’ expects argument of type ‘int’, but ar
 cc1: all warnings being treated as errors
 Compilation failed
 6c5cf83
+Thu 28 Mar 2024 10:38:42 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  10|2
+total_score: 45/70
+4a93fbc
