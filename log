@@ -214,3 +214,14 @@ list.c:128:13: error: ‘aux’ may be used uninitialized in this function [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 a0db843
+Thu 28 Mar 2024 10:12:22 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:122:5: error: ‘aux’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  122 |   if(aux == NULL)
+      |     ^
+cc1: all warnings being treated as errors
+Compilation failed
+134e83c
