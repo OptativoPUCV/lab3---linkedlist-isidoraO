@@ -116,7 +116,7 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) 
 {
-  void *dato = list->current->data;
+  Node *aux = list->current;
   if(list->current->prev)
     list->current->prev->next = list->current->next;
   else
@@ -125,10 +125,9 @@ void * popCurrent(List * list)
     list->current->next->prev = list->current->prev;
   else
     list->tail = list->current->prev;
-  list->current = list->current->next;
-  printf("%i ", *(int*)dato);
-  printf("%i ",*(int*) list->tail->prev->data);
-  return dato;
+  free(list->current);
+  list->current = aux->next;
+  return aux->data;
 }
 
 void cleanList(List * list) {
