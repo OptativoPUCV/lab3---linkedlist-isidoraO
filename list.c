@@ -123,7 +123,8 @@ void * popCurrent(List * list)
       free(list->current);
       if(list->head)
       {
-        
+        list->current = list->head;
+        list->head->prev = NULL;
       }
     }
   return NULL;
