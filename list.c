@@ -41,7 +41,8 @@ List * createList()
 void * firstList(List * list) 
 {
   list->current = list->head;
-  if(list->current) return list->current->data;
+  if(list->current) 
+    return list->current->data;
   return NULL;
 }
 
@@ -62,8 +63,12 @@ void * lastList(List * list)
   return NULL;
 }
 
-void * prevList(List * list) {
-    return NULL;
+void * prevList(List * list) 
+{
+  list->current = list->current->prev;
+  if(list->current != NULL)
+    return list->current->data;
+  return NULL;
 }
 
 void pushFront(List * list, void * data) {
