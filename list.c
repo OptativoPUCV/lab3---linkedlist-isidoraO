@@ -40,12 +40,13 @@ List * createList()
 
 void * firstList(List * list) 
 {
-  void * first = list->head;
-  return first;
+  return list->head;
 }
 
-void * nextList(List * list) {
-    return NULL;
+void * nextList(List * list) 
+{
+  void * next = list->head->next;
+  return next;
 }
 
 void * lastList(List * list) {
