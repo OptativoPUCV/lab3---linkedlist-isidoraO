@@ -124,7 +124,7 @@ void * popCurrent(List * list)
   if(list->current->next)
     list->current->next->prev = list->current->prev;
   list->current = list->current->next;
-  printf("%i ", *(int*)list->current->data);
+  printf("%i ", *(int*)dato);
   return dato;
 }
 
