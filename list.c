@@ -125,7 +125,7 @@ void * popCurrent(List * list)
     list->current->next->prev = list->current->prev;
   list->current = list->current->next;
   printf("%i ", *(int*)dato);
-  printf("%i ",*(int*) list->tail->data);
+  printf("%i ",*(int*) list->tail->prev->data);
   return dato;
 }
 
